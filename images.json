@@ -1,0 +1,25 @@
+{
+  "home": {
+    "image_url": "jez-timms-BHD2OxkYGSk-unsplash.jpg",
+    "title": "Eat Well, Live Well is all about eating a balanced diet and maintaining a healthy lifestyle.",
+    "subTitle": "Are you looking for a change?",
+    "button": "show" },
+  "about": {
+    "image_url": "tom-brunberg-D4ZtZX1UeAI-unsplash.jpg",
+    "title": "About Sushma!",
+    "subTitle": "",
+    "button": ""
+  },
+  "services": {
+    "image_url": "dor-farber-mTBgkgte7_Q-unsplash.jpg",
+    "title": "What can you expect from this program?",
+    "subTitle": "",
+    "button": ""
+  },
+  "contact": {
+    "image_url": "dhaya-eddine-bentaleb-vwnr7LQajac-unsplash.jpg",
+    "title": "",
+    "subTitle": "",
+    "button": ""
+  }
+}

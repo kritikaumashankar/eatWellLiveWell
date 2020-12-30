@@ -1,0 +1,32 @@
+.container{
+  max-width: 100vw;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar{
+  background-color: #35a988! important;
+  width: 100vw;
+}
+.navbar-collapse{
+  justify-content: center;
+}
+
+.nav-item{
+  padding: 1rem;
+  color: #fff;
+  font-size: 1.25rem;
+}
+
+.navbar-brand{
+  font-size: 2.25rem;
+  padding: 0;
+  margin-right:0;
+  margin-top: -0.5rem;
+}
+
+#navbar-laptop{
+  display: flex;
+  justify-content: center;
+}
+
