@@ -31,8 +31,8 @@ const navbarMobile = ([isNavCollapsed, setIsNavCollapsed]) =>{
               </Link>
             </li>
             <li className="nav-item">
-              <Link href="/services">
-                <a className="nav-link" onClick={handleNavCollapse}>Services</a>
+              <Link href="/program">
+                <a className="nav-link" onClick={handleNavCollapse}>Program</a>
               </Link>
             </li>
             <li className="nav-item">
@@ -66,8 +66,8 @@ const navbarLaptop = () => (
         </li>
 
         <li className="nav-item">
-          <Link href="/services">
-            <a className="nav-link" >Services</a>
+          <Link href="/program">
+            <a className="nav-link" >Program</a>
           </Link>
         </li>
         <li className="nav-item nav-link">
@@ -82,7 +82,7 @@ const Navbar = () =>{
   const [width, setWidth] = useState({width : undefined});
   const [isNavCollapsed, setIsNavCollapsed] = useState(true);
 const size = useWindowSize([width, setWidth]);
-    if(size.width > 920)
+    if(size.width > 1000)
       return navbarLaptop();
     else
       return navbarMobile([isNavCollapsed, setIsNavCollapsed]);

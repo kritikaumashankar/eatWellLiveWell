@@ -1,3 +1,4 @@
+import Link from 'next/link';
 
 const Hero = (props) =>{
 
@@ -6,7 +7,7 @@ const Hero = (props) =>{
     <div className='hero-text'>
         <span id="title">{props.imgProp[1].title} </span><br/>
         <span id="subtitle">{props.imgProp[1].subTitle}</span><br/>
-        {props.imgProp[1].button == "" ? "" :(<button type="button" className="btn btn-secondary" onLoad={showButton}>Work With Me!</button>)}
+        {props.imgProp[1].button == "" ? "" :(<Link href="/contact"><button type="button" className="btn btn-secondary" onLoad={showButton}>Work With Me!</button></Link>)}
       </div>
       
       <style jsx>{`
@@ -26,7 +27,7 @@ const Hero = (props) =>{
             color: white;
             position: relative;
             text-align: center;
-            background-color: rgba(0,0,0,0.2);
+            background-color: ${props.bgColor};
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -46,6 +47,8 @@ const Hero = (props) =>{
             width: 35%;
             font-size: 1.75vw;
             align-self: center;
+            background-color: #f95960;
+            border-color: #f95960;
           }
 
         `}

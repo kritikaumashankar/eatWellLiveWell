@@ -1,6 +1,7 @@
 import Hero from '../components/Hero';
 import { useState, useEffect } from 'react';
 import images from '../images.json';
+import Service from '../components/Service';
 
 const Index = () => {
   const size = useWindowSize();
@@ -8,11 +9,9 @@ const Index = () => {
   <div className="container" >
     {Object.entries(images).map((index,value) => {
       if(index[0] == 'home')
-       return(<Hero key="home" imgProp={index} width={size.width} height={size.height}/>)
+       return(<Hero key="home" imgProp={index} width={size.width} height={size.height} bgColor={`rgba(0,0,0,0.3)`}/>)
     })}
-    <section>
-      
-    </section>
+    <Service />
     <style jsx>{`
       section{
         margin: 2rem;
