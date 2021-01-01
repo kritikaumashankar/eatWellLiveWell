@@ -11,7 +11,7 @@ p{
 }
 .navbar{
   background-color: #35a988! important;
-  width: 100vw;
+  width: 100%;
 }
 .navbar-collapse{
   justify-content: center;
@@ -28,6 +28,7 @@ p{
   padding: 0;
   margin-right:0;
   margin-top: -0.5rem;
+  font-family: 'Charmonman', cursive;
 }
 
 #navbar-laptop{

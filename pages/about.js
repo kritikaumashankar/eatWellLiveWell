@@ -13,7 +13,7 @@ const About =() => {
        return(<Hero key="about" imgProp={index} width={size.width} height={size.height} bgColor={`rgba(0,0,0,0.2)`}/>)
     })}
     <section id="aboutMe">
-      <h2>Hi There! I am Sushma Subramaniam!</h2>
+      <h2>Hi There! I am Sushma Ramaswamy!</h2>
       <h5>I am a Precision Nutrition© certified consultant.</h5> 
       <hr />
       <div id="content">
@@ -40,7 +40,7 @@ const About =() => {
       }
 
       h2{
-        margin-top: 3rem;
+        margin-top: 3vh;
       }
 
       #about{
@@ -49,20 +49,22 @@ const About =() => {
         border-color: #9E9E9E;
         border-style: solid;
         border-radius: 100%;
+        margin-bottom:2vh;
       }
       #aboutContent{
         width: 50%;
-        font-size: 1.25rem;
+        font-size: 1.35vw;
       }
       p{
         line-height: 2rem;
+        color: #5a5a5a;
       }
       #content{
         display:flex;
         flex-direction: row;
         justify-content: space-evenly;
         position: relative;
-        top: 1rem;
+        top: 1vh;
       }
       @media(max-width:768px) {
         #content{
@@ -70,13 +72,17 @@ const About =() => {
           flex-direction: column;
           justify-content: center;
           position: relative;
-          top: 2rem;
+          top: 2vh;
         }
         #aboutContent{
           width: 100%;
-          font-size: 1.5rem;
+          font-size: 3vh;
           margin-top:1vh;
         }
+          p{
+            line-height: 4vh;
+            color: #5a5a5a;
+          }
         #about{
           width: 75%;
           height: 50vh;

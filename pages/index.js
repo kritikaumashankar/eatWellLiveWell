@@ -2,6 +2,7 @@ import Hero from '../components/Hero';
 import { useState, useEffect } from 'react';
 import images from '../images.json';
 import Service from '../components/Service';
+import Testimonial from '../components/Testimonial';
 
 const Index = () => {
   const size = useWindowSize();
@@ -12,14 +13,7 @@ const Index = () => {
        return(<Hero key="home" imgProp={index} width={size.width} height={size.height} bgColor={`rgba(0,0,0,0.3)`}/>)
     })}
     <Service />
-    <style jsx>{`
-      section{
-        margin: 2rem;
-        padding:0;
-        text-align: center;
-      }
-    `}
-    </style>
+    <Testimonial />
   </div>
 )}
 const useWindowSize = () =>{

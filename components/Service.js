@@ -1,7 +1,10 @@
 import Link from 'next/link';
 const Service =() => (
   <div className="container">
-    <h3>About Eat Well, Live Well</h3> 
+    <section>
+      <h3>About Eat Well, Live Well</h3> 
+      <img src="./justice-149209_1280.png" />
+    </section>
     <hr />
     <section id="aboutEatWell">
         <p> Eat Well, Live Well is all about eating a balanced diet and maintaining a healthy lifestyle. After years of learning about nutrition, fitness and wellness, I am well positioned to help people like you see changes in the way you lead a healthy life.
@@ -11,8 +14,8 @@ const Service =() => (
   
   <style jsx>{`
     .container{
-      background-color:#fff;
-      height:50vh;
+      background-color: #e9edf6;
+      height:60vh;
       display: flex;
       flex-direction: row;
       jusify-content:space-evenly;
@@ -22,39 +25,46 @@ const Service =() => (
     hr{ 
       border:         none;
       border-left:    1px solid hsla(200, 10%, 50%,100);
-      height:         85%;
-      width:          1px;       
+      height: 80%;
+      width: 5px;
+      position: relative;
+      top: 5vh;      
     }
 
     section{
-      width: 50%;
-      margin: 2rem;
+      width: 45%;
+      margin: 2vh 2vw;
       display: flex;
       flex-direction: column;
       top:0! important;
     }
     h3{
-      width: 50%;
-      height: 50%;
-      margin: 2rem;
+      width: 100%;
+      margin: 3vh auto;
       text-align: center;
-      position: relative;
-      top: 15vh;
+      font-family: 'Charmonman', cursive;
     }
 
+    img{
+      margin: 4vh auto;
+      width:30vw;
+      height:30vh;
+    }
     p{
-      font-size: 1.25rem;
+      font-size: 1.6vw;
       line-height: 35px;
-
+      margin: 3vh 3vw;
     }
     .btn{
       background-color:#f95960;
       border-color: #f95960;
+      width:50%;
+      align-self:center;
     }
-    @media(max-width:1000px) {
+    @media(max-width:1024px) {
       .container{
         background-color:#fff;
-        height:100vh;
+        height:100%;
         display: flex;
         flex-direction: column;
         jusify-content:space-evenly;
@@ -64,14 +74,15 @@ const Service =() => (
       h3{
       width: 80%;
       height: 50%;
-      margin: 1rem;
+      margin: 1vh;
       text-align: center;
       position: relative;
       top: 0;
+      font-size: 6vw;
       }
       section{
-        width: 90%;
-        margin: 1rem;
+        width: 100%;
+        margin: 1vh 1vw;
         display: flex;
         flex-direction: column;
         top: 12vh;
@@ -81,6 +92,15 @@ const Service =() => (
         border-left: 1px solid hsla(200,10%,50%,100);
         width: 100%;
         height:0;
+      }
+      p{
+        font-size: 4vw;
+        line-height: 35px;
+  
+      }
+      img{
+        width:75%;
+        height:30vh;
       }
     }
   

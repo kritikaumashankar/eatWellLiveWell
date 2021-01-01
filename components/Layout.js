@@ -9,6 +9,9 @@ const Layout = ({ children }) => (
         <title>Eat Well, Live Well | Sushma Subramaniam </title>
         <link rel = "stylesheet" href= "https://bootswatch.com/4/minty/bootstrap.min.css" />
         <link rel="icon" href="/logo.png" />
+        <link rel="preconnect" href="https://fonts.gstatic.com"/>
+        <link href="https://fonts.googleapis.com/css2?family=Pacificodisplay=swap" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css2?family=Charmonman:wght@700&display=swap" rel="stylesheet"/>
       </Head>
       <Navbar />
       { children }
