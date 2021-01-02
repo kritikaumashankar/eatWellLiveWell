@@ -7,7 +7,7 @@ const Footer = () => (
       <div className="container">
         <span id="copyrightId">©Copyright 2021</span>
         <span id="emailSpan">abc@gmail.com</span>
-        <StyledFontAwesomeIcon icon={faInstagram} />
+        <a href="https://www.instagram.com/sush_rams/"><FontAwesomeIcon icon={faInstagram} /></a>
       </div>
       <style jsx>
       {`
@@ -26,15 +26,15 @@ const Footer = () => (
         }
         #emailSpan{
           font-size:1.5vh;
-          margin: 2.5vh 4vw;
+          margin: 4vh 4vw;
         }
         i{
           width: 10%;
           height: 100%;
           color: #fff;
         }
-        svg{
-          width: 10%;
+        a{
+          width: 3%;
            height: 50%;
             margin: 2vh 0;
         }
@@ -46,6 +46,11 @@ const Footer = () => (
           #copyrightId{
             margin: 4vh 4vw;
             font-size:1.25vh;
+          }
+          a{
+            width: 5%;
+             height: 35%;
+              margin: 3vh 0;
           }
           
         }

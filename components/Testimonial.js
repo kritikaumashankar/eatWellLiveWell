@@ -10,7 +10,6 @@ const Testimonial =() => {
        <StyledCarouselItem>
            <section>
               <h2>What Clients Say...</h2>
-              <i class="fas fa-quote-left"></i>
               <blockquote className="blockquote">
                       <p className="mb-0">{testimonial[1].review}</p>
                       <footer className="font-italic">~~{testimonial[1].reviewer}</footer>
