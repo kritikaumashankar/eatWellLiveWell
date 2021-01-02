@@ -43,6 +43,14 @@ const navbarMobile = ([isNavCollapsed, setIsNavCollapsed]) =>{
           </ul>
         </div>
       </nav>
+      <style jsx>{`
+        @media(max-width:1024px) {
+          .navbar-brand{
+            font-size: 1.25rem;
+          }
+        }
+
+      `}</style>
     </>
  )};
 
