@@ -18,7 +18,7 @@ const Footer = () => (
           color: #fff;
           display: flex;
           flex-direction: row;
-          justify-content: space-evenly;
+          justify-content: space-around;
         }
         #copyrightId{
           margin: 4vh 4vw;
@@ -34,9 +34,9 @@ const Footer = () => (
           color: #fff;
         }
         a{
-          width: 3%;
-           height: 50%;
-            margin: 2vh 0;
+          width: 5%;
+           height: 75%;
+            margin: 3.5vh 0;
         }
         @media(max-width:1024px) {
           #emailSpan{

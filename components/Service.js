@@ -2,8 +2,8 @@ import Link from 'next/link';
 const Service =() => (
   <div className="container">
     <section>
-      <h3>About Eat Well, Live Well</h3> 
-      <img src="./justice-149209_1280.png" />
+      {/* <h3>About Eat Well, Live Well</h3>  */}
+      <img src="./logo.jpg" />
     </section>
     <hr />
     <section id="aboutEatWell">
@@ -14,12 +14,11 @@ const Service =() => (
   
   <style jsx>{`
     .container{
-      background-color: #e9edf6;
+      background-color: #fff;
       height:60vh;
       display: flex;
       flex-direction: row;
       jusify-content:space-evenly;
-      border: 2px solid #000;
     }
 
     hr{ 
@@ -47,8 +46,8 @@ const Service =() => (
 
     img{
       margin: 4vh auto;
-      width:30vw;
-      height:30vh;
+      width:40vw;
+      height:45vh;
     }
     p{
       font-size: 1.6vw;
