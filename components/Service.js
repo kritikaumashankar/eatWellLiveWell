@@ -45,9 +45,9 @@ const Service =() => (
     }
 
     img{
-      margin: 4vh auto;
+      margin: 2vh auto;
       width:40vw;
-      height:45vh;
+      height:50vh;
     }
     p{
       font-size: 1.6vw;

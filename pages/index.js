@@ -1,6 +1,6 @@
 import Hero from '../components/Hero';
 import { useState, useEffect } from 'react';
-import images from '../images.json';
+
 import Service from '../components/Service';
 import Testimonial from '../components/Testimonial';
 
@@ -8,10 +8,8 @@ const Index = () => {
   const size = useWindowSize();
   return(
   <div className="container" >
-    {Object.entries(images).map((index,value) => {
-      if(index[0] == 'home')
-       return(<Hero key="home" imgProp={index} width={size.width} height={size.height} bgColor={`rgba(0,0,0,0.3)`}/>)
-    })}
+    <Hero key={0} imgPage={0} width={size.width} height={size.height} bgColor={`rgba(0,0,0,0.3)`}/>
+   
     <Service />
     <Testimonial />
   </div>

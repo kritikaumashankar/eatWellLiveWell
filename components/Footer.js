@@ -5,9 +5,13 @@ import styled from 'styled-components';
 const Footer = () => (
   <>
       <div className="container">
-        <span id="copyrightId">©Copyright 2021</span>
-        <span id="emailSpan">abc@gmail.com</span>
-        <a href="https://www.instagram.com/sush_rams/"><FontAwesomeIcon icon={faInstagram} /></a>
+        <div id="copyrightDiv">
+          <span className="copyright">©Copyright 2021</span><br/>
+          <img id="logo" src="./logo.jpg" />
+          <span className="copyright"> Eat Well, Live Well</span>
+        </div>
+        <span id="emailSpan">sushrams10@gmail.com</span>
+        <a href="https://www.instagram.com/sush_rams/"><FontAwesomeIcon icon={faInstagram} size="xs"/></a>
       </div>
       <style jsx>
       {`
@@ -18,12 +22,18 @@ const Footer = () => (
           color: #fff;
           display: flex;
           flex-direction: row;
-          justify-content: space-around;
+          justify-content: space-evenly;
         }
-        #copyrightId{
-          margin: 4vh 4vw;
+
+        #copyrightDiv{
+          width:30%;
+          margin: 2vh 0;
+        }
+        .copyright{
+          margin: 4vh 0;
           font-size:1.5vh;
         }
+        
         #emailSpan{
           font-size:1.5vh;
           margin: 4vh 4vw;
@@ -34,9 +44,13 @@ const Footer = () => (
           color: #fff;
         }
         a{
+          width: 2%;
+          margin: 2.5vh 0;
+        }
+
+        #logo{
           width: 5%;
-           height: 75%;
-            margin: 3.5vh 0;
+          height:35%;
         }
         @media(max-width:1024px) {
           #emailSpan{
@@ -49,8 +63,7 @@ const Footer = () => (
           }
           a{
             width: 5%;
-             height: 35%;
-              margin: 3vh 0;
+            margin: 3vh 0;
           }
           
         }

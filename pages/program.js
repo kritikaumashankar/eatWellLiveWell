@@ -7,10 +7,7 @@ const Program = () => {
   const size = useWindowSize();
   return(
   <div className="container" >
-    {Object.entries(images).map((index,value) => {
-      if(index[0] == 'services')
-       return(<Hero key="services" imgProp={index} width={size.width} height={size.height}/>)
-    })}
+    <Hero key={2} imgPage={2} width={size.width} height={size.height}/>
     <div id="program">
       <div id="section1">
       <h3>What can you expect from the program?</h3>

@@ -8,16 +8,13 @@ const About =() => {
   const size = useWindowSize();
   return(
   <div className="container" >
-    {Object.entries(images).map((index,value) => {
-      if(index[0] == 'about')
-       return(<Hero key="about" imgProp={index} width={size.width} height={size.height} bgColor={`rgba(0,0,0,0.2)`}/>)
-    })}
+    <Hero key={1} imgPage={1} width={size.width} height={size.height} bgColor={`rgba(0,0,0,0.2)`}/>
     <section id="aboutMe">
       <h2>Hi There! I am Sushma Ramaswamy!</h2>
       <h5>I am a Precision Nutrition© certified consultant.</h5> 
       <hr />
       <div id="content">
-        <img id="about" src="./Sushma.jpeg"/>
+        <img id="about" src="./sushma.jpeg"/>
         <div id="aboutContent">
           <p>Besides being focused on nutrition, I do strength training 3 days a week and do yoga and meditation every day.</p>  
           <p>My aim is to make a difference to people’s lives and how they approach diet, fitness and being well.</p>  
@@ -45,7 +42,7 @@ const About =() => {
 
       #about{
         width: 25vw;
-        height: 40vh;
+        height: 60vh;
         border-color: #9E9E9E;
         border-style: solid;
         border-radius: 100%;
@@ -66,7 +63,7 @@ const About =() => {
         position: relative;
         top: 1vh;
       }
-      @media(max-width:768px) {
+      @media(max-width:1024px) {
         #content{
           display:flex;
           flex-direction: column;

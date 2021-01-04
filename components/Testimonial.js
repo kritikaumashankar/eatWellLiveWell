@@ -7,7 +7,7 @@ const Testimonial =() => {
   <div id="testimonialContainer">
     <Carousel>
     {Object.entries(testimonials).map(testimonial => ( 
-       <StyledCarouselItem>
+       <Carousel.Item key={testimonial[0]}>
            <section>
               <h2>What Clients Say...</h2>
               <blockquote className="blockquote">
@@ -16,7 +16,7 @@ const Testimonial =() => {
               </blockquote>
             </section>
             
-        </StyledCarouselItem>))}
+        </Carousel.Item>))}
     </Carousel>
 
   
@@ -28,7 +28,7 @@ const Testimonial =() => {
     }
     section{
       
-      height:100%;
+      height:70vh;
       background-image:url(${process.env.PUBLIC_URL}foodism360-0eJVAZJ7jJU-unsplash_edit.jpg);
       background-size: cover;
       background-position: center;
@@ -81,21 +81,28 @@ const Testimonial =() => {
         display: flex;
         flex-direction: column;
       }
+      section{
+        height:100vh;
+        background-image:url(${process.env.PUBLIC_URL}foodism360-0eJVAZJ7jJU-unsplash_edit.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat! important;
+      }
     }
     
   `}</style>
   </div>
 )};
 
-const StyledCarouselItem = styled(Carousel.Item)`
+// const StyledCarouselItem = styled(Carousel.Item)`
 
-    height:70vh;
-    @media (max-width: 1024px){
-      height:100vh;
+//     height:70vh;
+//     @media (max-width: 1024px){
+//       height:100vh;
 
-    }
+//     }
     
   
-`
+// `
 
 export default Testimonial;

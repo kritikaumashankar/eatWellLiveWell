@@ -66,13 +66,9 @@ const Contact = () => {
   }
 
   const size = useWindowSize();
-
-  return(
+return(
   <div className="container" >
-    {Object.entries(images).map((index,value) => {
-      if(index[0] == 'contact')
-       return(<Hero key="contact" imgProp={index} width={size.width} height={size.height}/>)
-    })}
+      <Hero key={3} imgPage={3} width={size.width} height={size.height}/>
       <section>
         <form onSubmit={handleOnSubmit}>
           <fieldset>

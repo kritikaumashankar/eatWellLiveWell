@@ -1,17 +1,32 @@
 import Link from 'next/link';
+import images from '../images.json';
 
 const Hero = (props) =>{
-  let title1 =props.imgProp[1].title;
-  if(props.imgProp[1].title.includes("?"))
-    title1 =props.imgProp[1].title.split("?");  
+  let title ="";
+  let subTitle="";
+  let imageUrl="";
+  let title1;
+  let buttonDisplay="";
+  Object.entries(images).map((index,value) => { 
+    if(value == props.imgPage)
+     return(
+        title =index[1].title,
+        subTitle = index[1].subTitle,
+        buttonDisplay = index[1].button,
+        imageUrl = index[1].image_url
+     )});
+  if(title.includes("?"))
+      title1 =title.split("?");  
   return(
     <div className='hero-container'>
     <div className='hero-text'>
-        {typeof title1 !== "string" ? title1.map((element) => (
-          element!==""?<span className="title">{element}?</span>:""
-        )):<span className="title">{title1}</span>}
-        <span id="subtitle">{props.imgProp[1].subTitle}</span><br/>
-        {props.imgProp[1].button == "" ? "" :(<Link href="/contact"><button type="button" className="btn btn-secondary" onLoad={showButton}>Work With Me!</button></Link>)}
+        {typeof title1 == "object" ? title1.map((element,index) => {
+          if(element !== "" )
+          return( <span key={index} className="title">{`${element}?`}</span> )
+          })
+        : <span className="title">{title}</span>}
+        <span id="subtitle">{subTitle}</span><br/>
+        {buttonDisplay == "" ? "" :(<Link href="/contact"><button type="button" className="btn btn-secondary" onLoad={showButton}>Work With Me!</button></Link>)}
       </div>
       
       <style jsx>{`
@@ -19,7 +34,7 @@ const Hero = (props) =>{
             width:100%;
             height:60vh;
             background-color: lightgrey;
-            background-image:url(${process.env.PUBLIC_URL}${props.imgProp[1].image_url});
+            background-image:url(${process.env.PUBLIC_URL}${imageUrl});
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat! important;
