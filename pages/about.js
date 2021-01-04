@@ -14,7 +14,7 @@ const About =() => {
       <h5>I am a Precision Nutrition© certified consultant.</h5> 
       <hr />
       <div id="content">
-        <img id="about" src={"./sushma.jpeg"}/>
+        <img id="about" src={"./sushma.jpg"}/>
         <div id="aboutContent">
           <p>Besides being focused on nutrition, I do strength training 3 days a week and do yoga and meditation every day.</p>  
           <p>My aim is to make a difference to people’s lives and how they approach diet, fitness and being well.</p>  
