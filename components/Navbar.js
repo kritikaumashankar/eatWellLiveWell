@@ -36,6 +36,11 @@ const navbarMobile = ([isNavCollapsed, setIsNavCollapsed]) =>{
               </Link>
             </li>
             <li className="nav-item">
+              <Link href="/testimonials">
+                <a className="nav-link" onClick={handleNavCollapse}>Testimonials</a>
+              </Link>
+            </li>
+            <li className="nav-item">
               <Link href="/contact">
               <a className="nav-link" onClick={handleNavCollapse}>Contact</a>
               </Link>
@@ -68,14 +73,18 @@ const navbarLaptop = () => (
           </Link>
         </li>
         <li className="nav-item">
+          <Link href="/program">
+            <a className="nav-link" >Program</a>
+          </Link>
+        </li>
+        <li className="nav-item">
           <Link href="/">
             <a className="navbar-brand">Eat Well, Live Well</a>
           </Link>
         </li>
-
         <li className="nav-item">
-          <Link href="/program">
-            <a className="nav-link" >Program</a>
+          <Link href="/testimonials">
+            <a className="nav-link" >Testimonials</a>
           </Link>
         </li>
         <li className="nav-item nav-link">

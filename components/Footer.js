@@ -72,16 +72,16 @@ const Footer = () => (
   </>
 );
 
-const StyledFontAwesomeIcon = styled(FontAwesomeIcon)`
-      width: 10%;
-      height: 50%;
-      margin: 2vh 0;
-      @media(max-width:1024px) {
-        width: 10%;
-        height: 35%;
-        margin: 3vh 0;
-      }
+// const StyledFontAwesomeIcon = styled(FontAwesomeIcon)`
+//       width: 10%;
+//       height: 50%;
+//       margin: 2vh 0;
+//       @media(max-width:1024px) {
+//         width: 10%;
+//         height: 35%;
+//         margin: 3vh 0;
+//       }
 
     
-`
+// `
 export default Footer;
