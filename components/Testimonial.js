@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import Carousel from 'react-bootstrap/Carousel';
 import testimonials from '../testimonials.json';
 import styled from 'styled-components';
@@ -5,39 +6,40 @@ const Testimonial =() => {
   
   return(
   <div id="testimonialContainer">
-    <Carousel>
+  <section>
+    <h2>What Clients Say...</h2>
+    <Carousel style={{height: '60%'}}>
     {Object.entries(testimonials).map(testimonial => ( 
-       <Carousel.Item key={testimonial[0]}>
-           <section>
-              <h2>What Clients Say...</h2>
+       <Carousel.Item key={testimonial[0]} style={{height: '50vh'}}>
+           
               <blockquote className="blockquote">
                       <p className="mb-0">{testimonial[1].review}</p>
                       <footer className="font-italic">~~{testimonial[1].reviewer}</footer>
               </blockquote>
-            </section>
             
         </Carousel.Item>))}
     </Carousel>
-
-  
+    <Link href="/testimonials"><button type="button" className="btn btn-secondary">Read More Testimonials</button></Link>
+    
+    </section>
   <style jsx>{`
     #testimonialContainer{
       width:100%;
-      height:70vh;
+      height:75vh;
       color: #fff;
     }
     section{
-      
-      height:70vh;
+      height:75vh;
       background-image:url(${process.env.PUBLIC_URL}foodism360-0eJVAZJ7jJU-unsplash_edit.jpg);
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat! important;
+      display: flex;
+      flex-direction: column;
     }
     
     .blockquote{
       width:70%;
-      height:75%;
       margin:auto;
       position: relative;
       top: 5vh;
@@ -49,11 +51,12 @@ const Testimonial =() => {
       text-align: center; 
       margin:auto;
       padding: 3vw;
+      align-self: center;
     }
     p{
       color: #fff;
       align-self: center;
-      font-size:1.25vw;
+      font-size:1.15vw;
     }
     footer{
       color: #fff;
@@ -61,6 +64,10 @@ const Testimonial =() => {
       margin: 3vh auto;
     }
 
+    .btn{
+      margin:auto;
+      align-self: center;
+    }
     @media (max-width: 1024px){
       #testimonialContainer{
         width:100%;
@@ -70,7 +77,7 @@ const Testimonial =() => {
       p{
         color: #fff;
         align-self: center;
-        font-size:3vw;
+        font-size:3.5vw;
       }
       .blockquote{
         width: 90%;
