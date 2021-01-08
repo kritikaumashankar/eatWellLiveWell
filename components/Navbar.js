@@ -62,11 +62,11 @@ const navbarMobile = ([isNavCollapsed, setIsNavCollapsed]) =>{
 const navbarLaptop = () => (
   <nav className="navbar navbar-expand-lg navbar-dark bg-primary" id="navbar-laptop">
       <ul className="navbar-nav">
-        <li className="nav-item active">
+        {/* <li className="nav-item active">
           <Link href="/">
             <a className="nav-link" >Home</a>
           </Link>
-        </li>
+        </li> */}
         <li className="nav-item">
           <Link href="/about">
             <a className="nav-link" >About</a>

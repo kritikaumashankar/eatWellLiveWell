@@ -7,7 +7,7 @@ const Program = () => {
   const size = useWindowSize();
   return(
   <div className="container" >
-    <Hero key={2} imgPage={2} width={size.width} height={size.height}/>
+    <Hero key={2} imgPage={2} width={size.width} height={size.height} bgColor={`rgba(0,0,0,0.35)`}/>
     <div id="program">
       <div id="section1">
       <h3>What can you expect from the program?</h3>

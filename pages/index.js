@@ -9,7 +9,7 @@ const Index = () => {
   
   return(
   <div className="container" >
-    <Hero key={0} imgPage={0} width={size.width} height={size.height} bgColor={`rgba(0,0,0,0.3)`}/>
+    <Hero key={0} imgPage={0} width={size.width} height={size.height} bgColor={`rgba(0,0,0,0.4)`}/>
     <Service /> 
     <Testimonial /> 
   </div>
