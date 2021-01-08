@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faQuoteLeft,faQuoteRight } from '@fortawesome/free-solid-svg-icons';
 import Hero from '../components/Hero';
+import { motion } from 'framer-motion';
 
 const Testimonials =() =>{
 
@@ -17,15 +18,23 @@ const Testimonials =() =>{
         {Object.entries(testimonials).map((testimonial,index)=>{
           const review = testimonial[1].review.includes("\"") ? testimonial[1].review.split("\"") : testimonial[1].review;
           return(
-            <section key={index}>
-              <FontAwesomeIcon icon={faQuoteLeft} size="xs" style={{width:'4%'}}/>
-              {typeof review == "object" ? <p id="review">{review[0]}<br/><strong>{`'${review[1]}'`}</strong></p> : <p id="review">{review}</p>}
-              <FontAwesomeIcon icon={faQuoteRight} size="xs" style={{width:'4%',alignSelf: 'flex-end'}}/>
-              <p id="reviewer"><strong>~~{testimonial[1].reviewer}</strong></p>
-              <hr id="sectionHr"/>
+            <section id={testimonial[0]} key={testimonial[0]}>
+              <motion.div
+                whileHover={{
+                  scale: 1.1,
+                  transition: {
+                    duration: .2
+                  }
+                }}>
+                <FontAwesomeIcon icon={faQuoteLeft} size="xs" style={{width:'4%'}}/>
+                {typeof review == "object" ? <p id="review">{review[0]}<br/><strong>{`'${review[1]}'`}</strong></p> : <p id="review">{review}</p>}
+                <FontAwesomeIcon icon={faQuoteRight} size="xs" style={{width:'4%',alignSelf: 'flex-end'}}/>
+                <p id="reviewer"><strong>~~{testimonial[1].reviewer}</strong></p>
+                <hr id="sectionHr"/>
+              </motion.div>
             </section>
-          )}
-          )}
+              )}
+              )}
       </div>    
       <style jsx>{`
         .testimonialContainer{

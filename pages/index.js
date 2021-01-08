@@ -6,12 +6,12 @@ import Testimonial from '../components/Testimonial';
 
 const Index = () => {
   const size = useWindowSize();
+  
   return(
   <div className="container" >
     <Hero key={0} imgPage={0} width={size.width} height={size.height} bgColor={`rgba(0,0,0,0.3)`}/>
-   
-    <Service />
-    <Testimonial />
+    <Service /> 
+    <Testimonial /> 
   </div>
 )}
 const useWindowSize = () =>{

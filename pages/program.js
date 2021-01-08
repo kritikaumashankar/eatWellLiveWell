@@ -1,6 +1,6 @@
 import Hero from '../components/Hero';
 import { useState, useEffect } from 'react';
-import images from '../images.json';
+import {motion} from 'framer-motion';
 
 const Program = () => {
 
@@ -13,24 +13,48 @@ const Program = () => {
       <h3>What can you expect from the program?</h3>
           <hr />
         <div id="programExpectation1">
-          <div className="card text-white bg-info mb-3">
-            <img id="image1" src="./pexels-vegan-liftz-2377165.jpg" />
-            <div className="card-body">
-              <h4 className="card-title">Customized plan</h4>
+        <motion.div
+                whileHover={{
+                  scale: 1.1,
+                  transition: {
+                    duration: .2
+                  }
+                }}>
+            <div className="card text-white bg-info mb-3">
+              <img id="image1" src="./pexels-vegan-liftz-2377165.jpg" />
+              <div className="card-body">
+                <h4 className="card-title">Customized plan</h4>
+              </div>
             </div>
-          </div>
-          <div className="card text-white bg-info mb-3">
-            <img src="./pexels-mentatdgt-1311518.jpg"/>
-            <div className="card-body">
-              <h4 className="card-title">1:1 session</h4>
+          </motion.div>
+          <motion.div
+                whileHover={{
+                  scale: 1.1,
+                  transition: {
+                    duration: .2
+                  }
+                }}>
+            <div className="card text-white bg-info mb-3">
+              <img src="./pexels-mentatdgt-1311518.jpg"/>
+              <div className="card-body">
+                <h4 className="card-title">1:1 session</h4>
+              </div>
             </div>
-          </div>
-          <div className="card text-white bg-info mb-3">
-            <img src="./assess-2372181_1920.jpg"/>
-            <div className="card-body">
-              <h4 className="card-title">Periodic Assessment</h4>
+          </motion.div>
+          <motion.div
+                whileHover={{
+                  scale: 1.1,
+                  transition: {
+                    duration: .2
+                  }
+                }}>
+            <div className="card text-white bg-info mb-3">
+              <img src="./assess-2372181_1920.jpg"/>
+              <div className="card-body">
+                <h4 className="card-title">Periodic Assessment</h4>
+              </div>
             </div>
-          </div>
+          </motion.div>
         </div>
         <div id="extraContent">
         <p><strong>All these require time, effort and patience.</strong> </p>

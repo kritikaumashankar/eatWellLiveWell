@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import images from '../images.json';
+import { motion } from 'framer-motion';
 
 const Hero = (props) =>{
   let title ="";
@@ -19,15 +20,30 @@ const Hero = (props) =>{
       title1 =title.split("?");  
   return(
     <div className='hero-container'>
-    <div className='hero-text'>
-        {typeof title1 == "object" ? title1.map((element,index) => {
-          if(element !== "" )
-          return( <span key={index} className="title">{`${element}?`}</span> )
-          })
-        : <span className="title">{title}</span>}
-        <span id="subtitle">{subTitle}</span><br/>
-        {buttonDisplay == "" ? "" :(<Link href="/contact"><button type="button" className="btn btn-secondary" onLoad={showButton}>Work With Me!</button></Link>)}
+      <motion.div  initial="hidden" animate="visible" variants={{
+        hidden: {
+          scale: .5,
+          opacity: 0
+            },
+            visible: {
+              scale: 1,
+              opacity: 1,
+              transition: {
+                delay: .4
+              }
+            },
+          }} style={{height:'100%'}}> 
+          <div className='hero-text'>
+          {typeof title1 == "object" ? title1.map((element,index) => {
+            if(element !== "" )
+            return( 
+              <span key={index} className="title">{`${element}?`}</span>
+            )})
+            : <span className="title">{title}</span>}
+          <span id="subtitle">{subTitle}</span><br/>
+          {buttonDisplay == "" ? "" :(<Link href="/contact"><button type="button" className="btn btn-secondary" onLoad={showButton}>Work With Me!</button></Link>)}
       </div>
+      </motion.div> 
       
       <style jsx>{`
           .hero-container{

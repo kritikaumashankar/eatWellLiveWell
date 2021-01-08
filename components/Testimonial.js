@@ -1,7 +1,6 @@
 import Link from 'next/link';
 import Carousel from 'react-bootstrap/Carousel';
 import testimonials from '../testimonials.json';
-import styled from 'styled-components';
 const Testimonial =() => {
   
   return(
@@ -9,15 +8,15 @@ const Testimonial =() => {
   <section>
     <h2>What Clients Say...</h2>
     <Carousel style={{height: '60%'}}>
-    {Object.entries(testimonials).map(testimonial => ( 
-       <Carousel.Item key={testimonial[0]} style={{height: '50vh'}}>
-           
-              <blockquote className="blockquote">
-                      <p className="mb-0">{testimonial[1].review}</p>
-                      <footer className="font-italic">~~{testimonial[1].reviewer}</footer>
-              </blockquote>
+    {Object.entries(testimonials).map((testimonial) => {
+      return( 
+       testimonial[1].reviewer !=="Anonymous" ?<Carousel.Item key={parseInt(testimonial[0])} style={{height: '50vh'}}>
+          <blockquote className="blockquote">
+            <p className="mb-0">{`${testimonial[1].review.substring(0,500)}`}<Link href={`/testimonials#${testimonial[0]}`} ><strong style={{cursor:'pointer'}}>...Read More</strong></Link></p>
+            <footer className="font-italic">~~{testimonial[1].reviewer}</footer>
+          </blockquote>
             
-        </Carousel.Item>))}
+        </Carousel.Item> : "")})}
     </Carousel>
     <Link href="/testimonials"><button type="button" className="btn btn-secondary">Read More Testimonials</button></Link>
     
@@ -39,7 +38,7 @@ const Testimonial =() => {
     }
     
     .blockquote{
-      width:70%;
+      width:50%;
       margin:auto;
       position: relative;
       top: 5vh;
@@ -77,14 +76,14 @@ const Testimonial =() => {
       p{
         color: #fff;
         align-self: center;
-        font-size:3.5vw;
+        font-size:3vw;
       }
       .blockquote{
         width: 90%;
-        height:75%;
+        height:80%;
         margin:auto;
         position: relative;
-        top: 0;
+        top: 2vh;
         display: flex;
         flex-direction: column;
       }
