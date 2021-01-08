@@ -50,7 +50,7 @@ const Hero = (props) =>{
             width:100%;
             height:60vh;
             background-color: lightgrey;
-            background-image:url(${process.env.PUBLIC_URL}${imageUrl});
+            background-image:url(./${imageUrl});
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat! important;

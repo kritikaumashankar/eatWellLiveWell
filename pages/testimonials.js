@@ -81,6 +81,9 @@ const Testimonials =() =>{
         .fa-quote-right{
           align-self: flex-end;
         }
+        .fa-quote-left{
+          align-self: flex-start;
+        }
       `}
       </style>
     </div>
