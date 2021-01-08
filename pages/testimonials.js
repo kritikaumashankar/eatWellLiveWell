@@ -25,7 +25,8 @@ const Testimonials =() =>{
                   transition: {
                     duration: .2
                   }
-                }}>
+                }}
+                style={{ display: 'flex', flexDirection: 'column'}}>
                 <FontAwesomeIcon icon={faQuoteLeft} size="xs" style={{width:'4%'}}/>
                 {typeof review == "object" ? <p id="review">{review[0]}<br/><strong>{`'${review[1]}'`}</strong></p> : <p id="review">{review}</p>}
                 <FontAwesomeIcon icon={faQuoteRight} size="xs" style={{width:'4%',alignSelf: 'flex-end'}}/>
@@ -53,16 +54,12 @@ const Testimonials =() =>{
           text-align: start;
           align-self: flex-start;
           margin: 3vh 3vw;
-          display:flex;
-          flex-direction: column;
         }
         section:nth-child(odd){
           width:70%;
           text-align: end;
           align-self: flex-end;
           margin: 3vh 3vw;
-          display:flex;
-          flex-direction: column;
         }
         h2{
           margin:3vh 0;
