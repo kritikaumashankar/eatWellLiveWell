@@ -29,7 +29,7 @@ const Testimonial =() => {
     }
     section{
       height:75vh;
-      background-image:url(${process.env.PUBLIC_URL}foodism360-0eJVAZJ7jJU-unsplash_edit.jpg);
+      background-image:url(./foodism360-0eJVAZJ7jJU-unsplash_edit.jpg);
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat! important;
