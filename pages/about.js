@@ -73,7 +73,7 @@ const About =() => {
         }
         #aboutContent{
           width: 100%;
-          font-size: 3vh;
+          font-size: inherit;
           margin-top:1vh;
         }
           p{

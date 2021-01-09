@@ -50,7 +50,7 @@ const Service =() => (
       height:50vh;
     }
     p{
-      font-size: 1.6vw;
+      font-size: inherit;
       line-height: 35px;
       margin: 3vh 3vw;
     }

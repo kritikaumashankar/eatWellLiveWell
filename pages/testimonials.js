@@ -97,7 +97,7 @@ const Testimonials =() =>{
           #review{
             width: 100%;
             align-self:center;
-            font-size:2.5vh;
+            font-size:inherit;
           }
         }
       `}

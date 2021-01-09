@@ -66,7 +66,7 @@ const Program = () => {
         </div>
       </div>
       <section id="programWork">
-      <h3>How does the program work?</h3>
+        <h3>How does the program work?</h3>
         <hr />
         <div id="workContent">
           <p>At a minimum, you will have to <strong>sign up for 3 months</strong> with me because you will need that much time to work on the proposed changes to see results.</p>
@@ -137,7 +137,20 @@ const Program = () => {
         text-align: center;
         font-size: 1.25vw;
       }
-      @media(max-width:900px) {
+
+      #extraContent{
+        width:80%;
+        margin:auto;
+        text-align: center;
+      }
+      #workContent{
+        width:80%;
+        margin:auto;
+        color: #fff;
+        text-align: center;
+      }
+      
+      @media(max-width:1024px) {
         #programExpectation1 {
           display:flex;
           flex-direction: column;
@@ -149,20 +162,20 @@ const Program = () => {
          
         }
         p{
-          font-size: 3vh;
+          font-size: inherit;
+        }
+        #extraContent{
+          width:90%;
+          margin:auto;
+          text-align: start;
+        }
+        #workContent{
+          width:90%;
+          margin:auto;
+          color: #fff;
         }
       }
       
-      #extraContent{
-        width:90%;
-        margin:auto;
-        text-align: start;
-      }
-      #workContent{
-        width:90%;
-        margin:auto;
-        color: #fff;
-      }
       
     `}
     </style>
