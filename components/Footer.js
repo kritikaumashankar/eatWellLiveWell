@@ -1,6 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInstagram } from '@fortawesome/free-brands-svg-icons';
-import styled from 'styled-components';
 
 const Footer = () => (
   <>
@@ -31,11 +30,11 @@ const Footer = () => (
         }
         .copyright{
           margin: 4vh 0;
-          font-size:1.5vh;
+          font-size:medium;
         }
         
         #emailSpan{
-          font-size:1.5vh;
+          font-size:medium;
           margin: 4vh 4vw;
         }
         i{
@@ -52,17 +51,32 @@ const Footer = () => (
           width: 5%;
           height:35%;
         }
-        @media(max-width:1024px) {
+        @media(max-width:860px) {
+          .container{
+            background-color: #35a988;
+            height: 15vh;
+            max-width: inherit;
+            color: #fff;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+          }
+
+          #copyrightDiv{
+            width:40%;
+            margin: 1vh 0;
+          }
+
           #emailSpan{
-            font-size:1.25vh;
+            font-size:x-small;
             margin: 4vh 4vw;
           }
           .copyright{
             margin: 0;
-            font-size:1.25vh;
+            font-size:x-small;
           }
           a{
-            width: 5%;
+            width: 3%;
             margin: 3vh 0;
           }
           #logo{

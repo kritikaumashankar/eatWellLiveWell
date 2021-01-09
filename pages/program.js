@@ -23,7 +23,7 @@ const Program = () => {
             <div className="card text-white bg-info mb-3">
               <img id="image1" src="./pexels-vegan-liftz-2377165.jpg" />
               <div className="card-body">
-                <h4 className="card-title">Customized plan</h4>
+                <h4 className="card-title">Customized<br/> plan</h4>
               </div>
             </div>
           </motion.div>
@@ -37,7 +37,7 @@ const Program = () => {
             <div className="card text-white bg-info mb-3">
               <img src="./pexels-mentatdgt-1311518.jpg"/>
               <div className="card-body">
-                <h4 className="card-title">1:1 session</h4>
+                <h4 className="card-title">1:1<br/> session</h4>
               </div>
             </div>
           </motion.div>
@@ -51,7 +51,7 @@ const Program = () => {
             <div className="card text-white bg-info mb-3">
               <img src="./assess-2372181_1920.jpg"/>
               <div className="card-body">
-                <h4 className="card-title">Periodic Assessment</h4>
+                <h4 className="card-title">Periodic<br/> Assessment</h4>
               </div>
             </div>
           </motion.div>
@@ -100,7 +100,7 @@ const Program = () => {
       }
       
       p{
-        font-size: 1.5vw;
+        font-size: medium;
         color: #5a5a5a;
       }
       #programExpectation{
@@ -133,9 +133,8 @@ const Program = () => {
         margin: 5vh auto;
       }
       .card{
-        width: 28vw;
+        width: 25vw;
         text-align: center;
-        font-size: 1.25vw;
       }
 
       #extraContent{
@@ -150,16 +149,15 @@ const Program = () => {
         text-align: center;
       }
       
-      @media(max-width:1024px) {
+      @media(max-width:768px) {
         #programExpectation1 {
           display:flex;
           flex-direction: column;
           justify-content: center;
         }
         .card{
-          width: 100%;
-          align-self: center;
-         
+          width: 75%;
+          margin: auto;
         }
         p{
           font-size: inherit;
@@ -173,8 +171,10 @@ const Program = () => {
           width:90%;
           margin:auto;
           color: #fff;
+          text-align: start;
         }
       }
+      
       
       
     `}

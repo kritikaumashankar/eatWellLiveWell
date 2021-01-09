@@ -48,7 +48,7 @@ const Hero = (props) =>{
       <style jsx>{`
           .hero-container{
             width:100%;
-            height:60vh;
+            height:70vh;
             background-color: lightgrey;
             background-image:url(./${imageUrl});
             background-size: cover;
@@ -104,7 +104,7 @@ const Hero = (props) =>{
             }
             .hero-container{
               width:100%;
-              height:60vh;
+              height:65vh;
               background-color: lightgrey;
               background-image:url(./${imageUrl});
               background-size: cover;

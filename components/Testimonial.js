@@ -7,12 +7,12 @@ const Testimonial =() => {
   <div id="testimonialContainer">
   <section>
     <h2>What Clients Say...</h2>
-    <Carousel style={{height: '60%'}}>
+    <Carousel style={{height: '55%'}}>
     {Object.entries(testimonials).map((testimonial) => {
       return( 
        testimonial[1].reviewer !=="Anonymous" ?<Carousel.Item key={parseInt(testimonial[0])} style={{height: '50vh'}}>
           <blockquote className="blockquote">
-            <p className="mb-0">{`${testimonial[1].review.substring(0,500)}`}<Link href={`/testimonials#${testimonial[0]}`} ><strong style={{cursor:'pointer'}}>...Read More</strong></Link></p>
+            <p className="mb-0">{`${testimonial[1].review.substring(0,400)}`}<Link href={`/testimonials#${testimonial[0]}`} ><strong style={{cursor:'pointer'}}>...Read More</strong></Link></p>
             <footer className="font-italic">~~{testimonial[1].reviewer}</footer>
           </blockquote>
             
@@ -38,7 +38,7 @@ const Testimonial =() => {
     }
     
     .blockquote{
-      width:50%;
+      width:60%;
       margin:auto;
       position: relative;
       top: 5vh;
@@ -49,13 +49,13 @@ const Testimonial =() => {
       color: #fff;
       text-align: center; 
       margin:auto;
-      padding: 3vw;
+      padding: 0;
       align-self: center;
     }
     p{
       color: #fff;
       align-self: center;
-      font-size:1.15vw;
+      font-size:large;
     }
     footer{
       color: #fff;
@@ -67,7 +67,7 @@ const Testimonial =() => {
       margin:auto;
       align-self: center;
     }
-    @media (max-width: 1024px){
+    @media (max-width: 960px){
       #testimonialContainer{
         width:100%;
         height:100vh;
@@ -76,14 +76,48 @@ const Testimonial =() => {
       p{
         color: #fff;
         align-self: center;
-        font-size:2.75vw;
+        font-size:large;
       }
       .blockquote{
-        width: 90%;
-        height:80%;
+        width: 80%;
+        height:65%;
         margin:auto;
+        padding:2em;
+        display: flex;
+        flex-direction: column;
+      }
+      section{
+        height:100vh;
+        background-image:url(./foodism360-0eJVAZJ7jJU-unsplash_edit.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat! important;
+      }
+      footer{
+        color: #fff;
+        align-self:flex-end;
+        margin: 0 auto;
+      }
+    }
+    
+    @media (max-width: 900px){
+      #testimonialContainer{
+        width:100%;
+        height:100vh;
+        color: #fff;
+      }
+      p{
+        color: #fff;
+        align-self: center;
+        font-size:medium;
+      }
+      .blockquote{
+        width: 85%;
+        height:75%;
+        margin:auto;
+        padding:0.5em;
         position: relative;
-        top: 2vh;
+        top: 5vh;
         display: flex;
         flex-direction: column;
       }

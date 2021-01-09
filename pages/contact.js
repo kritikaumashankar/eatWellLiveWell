@@ -177,9 +177,9 @@ return(
       display: inline-block;
     }
 
-    @media (max-width: 1024px){
+    @media (max-width: 900px){
       form{
-        width: 100%;
+        width: 88%;
         align-self:center;
       }
     }

@@ -2,7 +2,6 @@ import Link from 'next/link';
 const Service =() => (
   <div className="container">
     <section>
-      {/* <h3>About Eat Well, Live Well</h3>  */}
       <img src="./logo.jpg" />
     </section>
     <hr />
@@ -15,7 +14,7 @@ const Service =() => (
   <style jsx>{`
     .container{
       background-color: #fff;
-      height:60vh;
+      height:70vh;
       display: flex;
       flex-direction: row;
       jusify-content:space-evenly;
@@ -35,13 +34,11 @@ const Service =() => (
       margin: 2vh 2vw;
       display: flex;
       flex-direction: column;
-      top:0! important;
     }
-    h3{
-      width: 100%;
-      margin: 3vh auto;
-      text-align: center;
-      font-family: 'Charmonman', cursive;
+    #aboutEatWell{
+      height:75%;
+      position:relative;
+      top: 10vh;
     }
 
     img{
@@ -60,7 +57,7 @@ const Service =() => (
       width:50%;
       align-self:center;
     }
-    @media(max-width:1024px) {
+    @media(max-width:960px) {
       .container{
         background-color:#fff;
         height:100%;
@@ -69,21 +66,13 @@ const Service =() => (
         jusify-content:space-evenly;
 
       }
-      h3{
-      width: 80%;
-      height: 50%;
-      margin: 1vh;
-      text-align: center;
-      position: relative;
-      top: 0;
-      font-size: 6vw;
-      }
+      
       section{
         width: 100%;
         margin: 1vh 1vw;
         display: flex;
         flex-direction: column;
-        top: 12vh;
+        top: 7vh;
         position: relative;
       }
       hr{
@@ -92,13 +81,24 @@ const Service =() => (
         height:0;
       }
       p{
-        font-size: 4vw;
+        font-size: medium;
         line-height: 35px;
   
       }
       img{
-        width:75%;
-        height:30vh;
+        width:45%;
+        height:35vh;
+      }
+      #aboutEatWell{
+        height:100%;
+        position:relative;
+        top: 0vh;
+      }
+      .btn{
+        background-color:#f95960;
+        border-color: #f95960;
+        width:35%;
+        align-self:center;
       }
     }
   

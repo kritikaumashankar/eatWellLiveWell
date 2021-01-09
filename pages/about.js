@@ -42,7 +42,7 @@ const About =() => {
 
       #about{
         width: 25vw;
-        height: 60vh;
+        height: 50vh;
         border-color: #9E9E9E;
         border-style: solid;
         border-radius: 100%;
@@ -72,17 +72,45 @@ const About =() => {
           top: 2vh;
         }
         #aboutContent{
-          width: 100%;
-          font-size: inherit;
+          width: 90%;
+          font-size: large;
           margin-top:1vh;
+          align-self: center;
         }
           p{
             line-height: 4vh;
             color: #5a5a5a;
           }
         #about{
-          width: 75%;
-          height: 50vh;
+          width: 30%;
+          height: 40vh;
+          border-color: #9E9E9E;
+          border-style: solid;
+          border-radius: 100%;
+          align-self: center;
+        }
+      }
+      @media(max-width:812px) {
+        #content{
+          display:flex;
+          flex-direction: column;
+          justify-content: center;
+          position: relative;
+          top: 2vh;
+        }
+        #aboutContent{
+          width: 90%;
+          font-size: large;
+          margin-top:1vh;
+          align-self: center;
+        }
+          p{
+            line-height: 4vh;
+            color: #5a5a5a;
+          }
+        #about{
+          width: 40%;
+          height: 40vh;
           border-color: #9E9E9E;
           border-style: solid;
           border-radius: 100%;

@@ -50,13 +50,13 @@ const Testimonials =() =>{
           width:95%;
         }
         section:nth-child(even){
-          width:70%;
+          width:77.5%;
           text-align: start;
           align-self: flex-start;
           margin: 3vh 3vw;
         }
         section:nth-child(odd){
-          width:70%;
+          width:77.5%;
           text-align: end;
           align-self: flex-end;
           margin: 3vh 3vw;
@@ -81,7 +81,7 @@ const Testimonials =() =>{
         .fa-quote-left{
           align-self: flex-start;
         }
-        @media(max-width:1024px) {
+        @media(max-width:900px) {
           section:nth-child(even){
             width:90%;
             text-align: center;
