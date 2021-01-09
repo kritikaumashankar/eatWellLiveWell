@@ -11,7 +11,7 @@ const About =() => {
     <Hero key={1} imgPage={1} width={size.width} height={size.height} bgColor={`rgba(0,0,0,0.2)`}/>
     <section id="aboutMe">
       <h2>Hi There! I am Sushma Ramaswamy!</h2>
-      <h5>I am a Precision Nutrition© certified consultant.</h5> 
+      <h5>I am a Precision Nutrition© Certified Consultant.</h5> 
       <hr />
       <div id="content">
         <img id="about" src={"./sushma.jpg"}/>
