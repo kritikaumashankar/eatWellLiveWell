@@ -137,14 +137,14 @@ const Program = () => {
         text-align: center;
         font-size: 1.25vw;
       }
-      @media(max-width:1024px) {
+      @media(max-width:900px) {
         #programExpectation1 {
           display:flex;
           flex-direction: column;
           justify-content: center;
         }
         .card{
-          width: 90%;
+          width: 100%;
           align-self: center;
          
         }
@@ -154,12 +154,12 @@ const Program = () => {
       }
       
       #extraContent{
-        width:75%;
+        width:90%;
         margin:auto;
-        text-align: center;
+        text-align: start;
       }
       #workContent{
-        width:75%;
+        width:90%;
         margin:auto;
         color: #fff;
       }

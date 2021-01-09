@@ -18,13 +18,13 @@ const navbarMobile = ([isNavCollapsed, setIsNavCollapsed]) =>{
 
         <div className={`${isNavCollapsed ? 'collapse' : ''} navbar-collapse`} id="navbarColor01">
           <ul className="navbar-nav mr-auto">
-            <li className="nav-item active">
+            {/* <li className="nav-item active">
               <Link href="/">
                 <a className="nav-link" onClick={handleNavCollapse}>Home
                 <span className="sr-only">(current)</span>
                 </a>
               </Link>
-            </li>
+            </li> */}
             <li className="nav-item">
               <Link href="/about">
                 <a className="nav-link" onClick={handleNavCollapse}>About</a>

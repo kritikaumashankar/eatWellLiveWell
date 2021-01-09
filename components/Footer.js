@@ -57,13 +57,17 @@ const Footer = () => (
             font-size:1.25vh;
             margin: 4vh 4vw;
           }
-          #copyrightId{
-            margin: 4vh 4vw;
+          .copyright{
+            margin: 0;
             font-size:1.25vh;
           }
           a{
             width: 5%;
             margin: 3vh 0;
+          }
+          #logo{
+            width: 15%;
+            height:35%;
           }
           
         }

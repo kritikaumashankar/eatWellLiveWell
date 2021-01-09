@@ -73,13 +73,32 @@ const Testimonials =() =>{
         #reviewer{
           text-align: end;
           margin: 2vh 15vw;
-          font-size: x  -large;
+          font-size: x-large;
         }
         .fa-quote-right{
           align-self: flex-end;
         }
         .fa-quote-left{
           align-self: flex-start;
+        }
+        @media(max-width:1024px) {
+          section:nth-child(even){
+            width:90%;
+            text-align: center;
+            align-self:center;
+            margin: 3vh 3vw;
+          }
+          section:nth-child(odd){
+            width:90%;
+            text-align: center;
+            align-self:center;
+            margin: 3vh 3vw;
+          }
+          #review{
+            width: 100%;
+            align-self:center;
+            font-size:2.5vh;
+          }
         }
       `}
       </style>

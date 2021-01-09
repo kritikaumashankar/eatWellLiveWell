@@ -176,6 +176,13 @@ return(
       bottom: 0.5;
       display: inline-block;
     }
+
+    @media (max-width: 1024px){
+      form{
+        width: 100%;
+        align-self:center;
+      }
+    }
     `}
     </style>
     

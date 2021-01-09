@@ -67,7 +67,6 @@ const Service =() => (
         display: flex;
         flex-direction: column;
         jusify-content:space-evenly;
-        border: 2px solid #000;
 
       }
       h3{
