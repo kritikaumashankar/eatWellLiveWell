@@ -76,7 +76,7 @@ const Testimonial =() => {
       p{
         color: #fff;
         align-self: center;
-        font-size:3vw;
+        font-size:2.75vw;
       }
       .blockquote{
         width: 90%;
