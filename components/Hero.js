@@ -55,7 +55,6 @@ const Hero = (props) =>{
             background-position: center;
             background-repeat: no-repeat! important;
             background-attachment: fixed;
-        }
           }
           .hero-text{
             height: 100%;
@@ -102,6 +101,16 @@ const Hero = (props) =>{
               align-self: center;
               background-color: #f95960;
               border-color: #f95960;
+            }
+            .hero-container{
+              width:100%;
+              height:60vh;
+              background-color: lightgrey;
+              background-image:url(./${imageUrl});
+              background-size: cover;
+              background-position: center;
+              background-repeat: no-repeat! important;
+              background-attachment: inherit;
             }
           }
         `}
