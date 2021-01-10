@@ -109,8 +109,8 @@ const About =() => {
             color: #5a5a5a;
           }
         #about{
-          width: inherit;
-          height: auto;
+          width: auto;
+          height: 40vh;
           border-color: #9E9E9E;
           border-style: solid;
           border-radius: 100%;
