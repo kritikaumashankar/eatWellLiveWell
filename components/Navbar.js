@@ -65,7 +65,7 @@ const navbarLaptop = () => (
             <a className="nav-link" >Program</a>
           </Link>
         </li>
-        <li className="nav-item">
+        <li className="nav-item active">
           <Link href="/">
             <a className="navbar-brand">Eat Well, Live Well</a>
           </Link>
