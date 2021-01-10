@@ -105,12 +105,12 @@ const About =() => {
           align-self: center;
         }
           p{
-            line-height: 4vh;
+            line-height: 6vh;
             color: #5a5a5a;
           }
         #about{
-          width: 40%;
-          height: 40vh;
+          width: inherit;
+          height: auto;
           border-color: #9E9E9E;
           border-style: solid;
           border-radius: 100%;
