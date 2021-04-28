@@ -69,7 +69,7 @@ const Service =() => (
       
       section{
         width: 100%;
-        margin: 1vh 0;
+        margin: 1vh 1vw;
         display: flex;
         flex-direction: column;
         top: 7vh;
