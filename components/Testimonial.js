@@ -1,7 +1,6 @@
 import Link from 'next/link';
 import Carousel from 'react-bootstrap/Carousel';
-import testimonials from '../testimonials.json';
-const Testimonial =() => {
+const Testimonial =({testimonials}) => {
   
   return(
   <div id="testimonialContainer">

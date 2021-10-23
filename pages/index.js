@@ -5,7 +5,7 @@ import Service from '../components/Service';
 import AboutSushma from '../components/AboutSushma';
 import Testimonial from '../components/Testimonial';
 
-const Index = () => {
+const Index = ({testimonials}) => {
   const size = useWindowSize();
   
   return(
@@ -13,7 +13,7 @@ const Index = () => {
     <Hero key={0} imgPage={0} width={size.width} height={size.height} bgColor={`rgba(0,0,0,0.4)`}/>
     <Service /> 
     <AboutSushma />
-    <Testimonial /> 
+    <Testimonial testimonials={testimonials}/> 
   </div>
 )}
 const useWindowSize = () =>{
@@ -33,5 +33,9 @@ const useWindowSize = () =>{
 
   return windowSize;
 }
-
+Index.getInitialProps = async () =>{
+  const res = await fetch('http://localhost:3000/api/reviews')
+  const { data } = await res.json();
+  return { testimonials: data };
+}
 export default Index;
