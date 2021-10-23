@@ -9,7 +9,7 @@ export default async (req,res) =>{
   switch(method){
     case 'GET':
       try{
-          const reviews = await Reviews.find({});
+          const reviews = await Reviews.find({}).sort({_id: -1});
           res.status(200).json({ success: true, data: reviews})
       }catch(error){
         res.status(400).json({ success: false})

@@ -16,11 +16,9 @@ const NewReview = () => {
   useEffect(() => {
     if(isSubmitting){
       if(Object.keys(errors).length === 0) {
-        console.log(`form before submission: ${form.priority}`)
           createReview();
           setForm({review:'', reviewer: '',image: '',priority: 0, anonymous:false}) 
           reset();
-          console.log(`form : ${form}`)
           alert('Success');
             
         }
@@ -33,7 +31,7 @@ const NewReview = () => {
 
 const createReview = async () => {
   try{
-      const res = await fetch(`http://localhost:3000/api/reviews/`, {
+      const res = await fetch(`${process.env.DB_URL_API}/api/reviews/`, {
         method: 'POST',
         headers: {
           "Accept": "application/json",
@@ -126,7 +124,7 @@ const createReview = async () => {
             })
             alert("Upload successful!")
             setIsButtonLoading(false);
-          }, 5000)
+          }, 10000)
           
   }
 

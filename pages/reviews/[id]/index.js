@@ -28,7 +28,7 @@ const Index = ({review}) => {
 
   const updateReview = async () => {
     try{
-        const res = await fetch(`http://localhost:3000/api/reviews/${router.query.id}`, {
+        const res = await fetch(`${process.env.DB_URL_API}/api/reviews/${router.query.id}`, {
           method: 'PUT',
           headers: {
             "Accept": "application/json",
@@ -262,7 +262,8 @@ const Index = ({review}) => {
 }
 
 Index.getInitialProps = async ({query: {id} }) =>{
-  const res = await fetch(`http://localhost:3000/api/reviews/${id}`);
+  const url = `${process.env.DB_URL_API}/api/reviews/${id}`
+  const res = await fetch(url);
   const { data } = await res.json()
 
   return { review: data }

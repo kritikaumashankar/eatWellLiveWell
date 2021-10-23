@@ -34,7 +34,7 @@ const useWindowSize = () =>{
   return windowSize;
 }
 Index.getInitialProps = async () =>{
-  const res = await fetch('http://localhost:3000/api/reviews')
+  const res = await fetch(`${process.env.DB_URL_API}}/api/reviews`)
   const { data } = await res.json();
   return { testimonials: data };
 }

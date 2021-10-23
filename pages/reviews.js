@@ -28,7 +28,7 @@ const Reviews = ({reviews}) =>{
     }
     
     try{
-      const deleted = await fetch(`http://localhost:3000/api/reviews/${reviewId}`,{
+      const deleted = await fetch(`${process.env.DB_URL_API}/api/reviews/${reviewId}`,{
         method : "Delete"
       })
       router.push('/reviews')
@@ -38,8 +38,7 @@ const Reviews = ({reviews}) =>{
   }
 
   const showImage = (review) =>{
-    console.log(review)
-    console.log(`${review.reviewer} : ${review.image}` )
+
     return(
       <div> 
         <Button className="btn btn-primary" onClick={()=>{setModalId(`modal${review._id}`)}}>Click here!</Button>
@@ -123,7 +122,9 @@ const Reviews = ({reviews}) =>{
   )
 }
 Reviews.getInitialProps = async () =>{
-  const res = await fetch('http://localhost:3000/api/reviews')
+  const { DB_URL_API } = process.env;
+  console.log(DB_URL_API)
+  const res = await fetch(DB_URL_API+'/api/reviews/')
   const { data } = await res.json();
   return { reviews: data };
 }
